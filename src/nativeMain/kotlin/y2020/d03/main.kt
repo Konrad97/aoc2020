@@ -1,5 +1,7 @@
 package y2020.d03
 
+import kotlin.math.floor
+
 fun main() {
     a()
     b()
@@ -11,17 +13,16 @@ fun a() {
 
 fun b() {
     listOf(
-        preparedInput.traverse(1, 1),
-        preparedInput.traverse(3, 1),
-        preparedInput.traverse(5, 1),
-        preparedInput.traverse(7, 1),
-        preparedInput.traverse(1, 2)
+            preparedInput.traverse(1, 1),
+            preparedInput.traverse(3, 1),
+            preparedInput.traverse(5, 1),
+            preparedInput.traverse(7, 1),
+            preparedInput.traverse(1, 2)
     ).printResults()
 }
 
 fun List<List<Boolean>>.traverse(right: Int, down: Int): Int {
-    return filterIndexed { idx, _ -> idx % down == 0 }
-        .foldIndexed(0) { index, acc, list ->
-            if (list[index * right % list.size]) acc + 1 else acc
-        }
+    return foldIndexed(0) { idx, acc, list ->
+        if (idx % down == 0 && list[(idx / down) * right % list.size]) acc + 1 else acc
+    }
 }

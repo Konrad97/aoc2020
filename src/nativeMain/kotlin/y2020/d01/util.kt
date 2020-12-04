@@ -1,7 +1,7 @@
 package y2020.d01
 
 fun List<Int>.printResult() {
-    println("The product of: ${joinToString(" * ")} = ${reduce{a, i -> a*i}} !")
+    println("The product of: ${joinToString(" * ")} = ${reduce{a, i -> a*i}}")
 }
 
 val preparedInput : List<Int> by lazy {
