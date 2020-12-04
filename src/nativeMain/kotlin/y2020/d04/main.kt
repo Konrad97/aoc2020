@@ -6,7 +6,7 @@ fun main() {
 }
 
 fun a() {
-    val requiredFields = listOf("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid")
+    val requiredFields = setOf("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid")
 
     preparedInput.count { requiredFields.all { requiredField -> requiredField in it } }.printResult()
 }
@@ -24,12 +24,12 @@ fun b() {
             }
         },
         "hcl" to { it.startsWith('#') && it.substring(1).all { char -> char in "0123456789abcdef" } },
-        "ecl" to { it in listOf("amb", "blu", "brn", "gry", "grn", "hzl", "oth") },
+        "ecl" to { it in setOf("amb", "blu", "brn", "gry", "grn", "hzl", "oth") },
         "pid" to { it.length == 9 && it.all { digit -> digit in "0123456789" } },
     )
 
     preparedInput.count {
-        requiredFields.keys.all { reqKey -> it[reqKey]?.run { requiredFields[reqKey]!!(this) } ?: false }
+        requiredFields.entries.all { reqEntry -> it[reqEntry.key]?.run { reqEntry.value(this) } ?: false }
     }.printResult()
 }
 
