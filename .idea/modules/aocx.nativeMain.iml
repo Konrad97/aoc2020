@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="Native (mingw_x64) " allPlatforms="Native []/Native [mingw_x64]" useProjectSettings="false" isTestModule="false" externalProjectId="aocx">
+        <dependsOnModuleNames>aocx:commonMain</dependsOnModuleNames>
+        <sourceSets>
+          <sourceSet>aocx.commonMain</sourceSet>
+        </sourceSets>
+        <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
+        <externalSystemTestTasks>
+          <externalSystemNativeMainRunTask>runD01DebugExecutableNative|aocx:nativeMain|native|y2020.d01.main|true</externalSystemNativeMainRunTask>
+          <externalSystemNativeMainRunTask>runD01ReleaseExecutableNative|aocx:nativeMain|native|y2020.d01.main|false</externalSystemNativeMainRunTask>
+          <externalSystemNativeMainRunTask>runD02DebugExecutableNative|aocx:nativeMain|native|y2020.d02.main|true</externalSystemNativeMainRunTask>
+          <externalSystemNativeMainRunTask>runD02ReleaseExecutableNative|aocx:nativeMain|native|y2020.d02.main|false</externalSystemNativeMainRunTask>
+          <externalSystemNativeMainRunTask>runD03DebugExecutableNative|aocx:nativeMain|native|y2020.d03.main|true</externalSystemNativeMainRunTask>
+          <externalSystemNativeMainRunTask>runD03ReleaseExecutableNative|aocx:nativeMain|native|y2020.d03.main|false</externalSystemNativeMainRunTask>
+          <externalSystemNativeMainRunTask>runD04DebugExecutableNative|aocx:nativeMain|native|y2020.d04.main|true</externalSystemNativeMainRunTask>
+          <externalSystemNativeMainRunTask>runD04ReleaseExecutableNative|aocx:nativeMain|native|y2020.d04.main|false</externalSystemNativeMainRunTask>
+        </externalSystemTestTasks>
+        <compilerSettings />
+        <compilerArguments>
+          <option name="languageVersion" value="1.4" />
+          <option name="apiVersion" value="1.4" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="multiPlatform" value="true" />
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+</module>

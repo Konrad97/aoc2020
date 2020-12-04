@@ -1,2 +1,1 @@
-# aocKNative
-Advent of Code in Kotlin Native
+# aoc2020
