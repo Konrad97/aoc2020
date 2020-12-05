@@ -5,15 +5,13 @@ fun Int.printResult() {
 }
 
 val preparedInput: List<Int> by lazy {
-    // Convert String to Int via Bit manipulation
-    input.lines().filter { it.isNotEmpty() }.map { seat ->
-        seat.subSequence(0 until 7)
-            .fold(0) { acc, c -> if (c == 'B') (acc shl 1) or 1 else acc shl 1 } * 8 +
-                seat.subSequence(7 until seat.length)
-                    .fold(0) { acc, c ->
-                        if (c == 'R') (acc shl 1) or 1 else acc shl 1
-                    }
-    }
+    input.lines().filter { it.isNotEmpty() }
+        .map { it
+                .replace(Regex("[B|R]"), "1")
+                .replace(Regex("[F|L]"), "0")
+                .toInt(2)
+        }
+
 }
 
 private const val input = """FFBBFFFLLL
