@@ -6,7 +6,7 @@ fun main() {
 }
 
 fun a() {
-    preparedInput.maxByOrNull { it }?.printResult()
+    preparedInput.maxOrNull()!!.printResult()
 }
 
 fun b() {

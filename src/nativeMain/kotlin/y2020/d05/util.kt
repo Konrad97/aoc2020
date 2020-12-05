@@ -6,10 +6,14 @@ fun Int.printResult() {
 
 val preparedInput: List<Int> by lazy {
     input.lines().filter { it.isNotEmpty() }
-        .map { it
-                .replace(Regex("[B|R]"), "1")
-                .replace(Regex("[F|L]"), "0")
-                .toInt(2)
+        .map {
+            it.fold(0) { acc, char ->
+                when (char) {
+                    'B', 'R' -> (acc shl 1) or 1
+                    'F', 'L' -> acc shl 1
+                    else -> error("Invalid char: '$char'")
+                }
+            }
         }
 
 }
