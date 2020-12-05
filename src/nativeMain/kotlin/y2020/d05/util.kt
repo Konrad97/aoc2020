@@ -1,22 +1,18 @@
 package y2020.d05
 
-fun Pair<Int, Int>.printResult() {
-    println("The max result is ${this.first} * 8 + ${this.second} = ${this.first * 8 + this.second}")
+fun Int.printResult() {
+    println("It is seat number $this")
 }
 
-val preparedInput: List<List<Char>> by lazy {
-    input.lines().filter { it.isNotEmpty() }.map { line -> line.toCharArray().map { it } }
-}
-
-val preparedInputAsStrings: List<String> by lazy {
-    input.lines().filter { it.isNotEmpty() }
-}
-
-val preparedInputAsByte: List<Pair<Int, Int>> by lazy {
+val preparedInput: List<Int> by lazy {
+    // Convert String to Int via Bit manipulation
     input.lines().filter { it.isNotEmpty() }.map { seat ->
-        seat.subSequence(0..7).let { row ->
-            row.fold(0) { acc, c -> if (c == 'B') (acc shl 1) or 1 else acc shl 1 } to 1
-        }
+        seat.subSequence(0 until 7)
+            .fold(0) { acc, c -> if (c == 'B') (acc shl 1) or 1 else acc shl 1 } * 8 +
+                seat.subSequence(7 until seat.length)
+                    .fold(0) { acc, c ->
+                        if (c == 'R') (acc shl 1) or 1 else acc shl 1
+                    }
     }
 }
 
