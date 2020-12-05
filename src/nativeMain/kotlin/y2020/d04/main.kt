@@ -8,7 +8,7 @@ fun main() {
 fun a() {
     val requiredFields = setOf("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid")
 
-    preparedInput.count { requiredFields.all { requiredField -> requiredField in it } }.printResult()
+    preparedInput.count { it.keys.containsAll(requiredFields) }.printResult()
 }
 
 fun b() {
@@ -23,13 +23,15 @@ fun b() {
                 else -> false
             }
         },
-        "hcl" to { it.startsWith('#') && it.substring(1).all { char -> char in "0123456789abcdef" } },
+        "hcl" to { it matches Regex("#[0-9|a-f]{6}") },
         "ecl" to { it in setOf("amb", "blu", "brn", "gry", "grn", "hzl", "oth") },
-        "pid" to { it.length == 9 && it.all { digit -> digit in "0123456789" } },
+        "pid" to { it matches Regex("[0-9]{9}") },
     )
 
     preparedInput.count {
         requiredFields.entries.all { reqEntry -> it[reqEntry.key]?.run { reqEntry.value(this) } ?: false }
     }.printResult()
+
+    "0123456789".toList().containsAll(listOf('a'))
 }
 

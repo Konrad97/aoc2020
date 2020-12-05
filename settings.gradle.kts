@@ -1,3 +1,3 @@
 
-rootProject.name = "aocx"
+rootProject.name = "aocKNative"
 
