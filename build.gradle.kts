@@ -1,6 +1,6 @@
 
 plugins {
-    kotlin("multiplatform") version "1.4.10"
+    kotlin("multiplatform") version "1.4.20"
 }
 group = "me.melze"
 version = "1.0-SNAPSHOT"
@@ -8,6 +8,7 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
 }
+
 kotlin {
     val hostOs = System.getProperty("os.name")
     val isMingwX64 = hostOs.startsWith("Windows")
@@ -31,6 +32,9 @@ kotlin {
             }
             executable("d04") {
                 entryPoint = "y2020.d04.main"
+            }
+            executable("d05") {
+                entryPoint = "y2020.d05.main"
             }
         }
     }

@@ -2,7 +2,7 @@
 <module version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
-      <configuration version="3" platform="Common (experimental) " allPlatforms="JS []/JVM [1.6]/Native []/Native [general]" useProjectSettings="false" isTestModule="true" externalProjectId="aocKNative">
+      <configuration version="3" platform="Common (experimental) " allPlatforms="JS []/JVM [1.6]/Native []/Native [general]" useProjectSettings="false" isTestModule="true" externalProjectId="aocKNative" pureKotlinSourceFolders="C:\Users\melze\Projects\aocKNative\src\commonMain\kotlin;C:\Users\melze\Projects\aocKNative\src\nativeMain\kotlin;C:\Users\melze\Projects\aocKNative\src\nativeMain\kotlin">
         <newMppModelJpsModuleKind>SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <externalSystemTestTasks>
           <externalSystemTestTask>nativeTest|aocKNative:nativeTest|native</externalSystemTestTask>
