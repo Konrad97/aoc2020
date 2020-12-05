@@ -4,17 +4,8 @@ fun Int.printResult() {
     println("It is seat number $this")
 }
 
-val preparedInput: List<Int> by lazy {
+val preparedInput: List<String> by lazy {
     input.lines().filter { it.isNotEmpty() }
-        .map {
-            it.fold(0) { acc, char ->
-                when (char) {
-                    'B', 'R' -> (acc shl 1) or 1
-                    else -> acc shl 1
-                }
-            }
-        }
-
 }
 
 private const val input = """FFBBFFFLLL

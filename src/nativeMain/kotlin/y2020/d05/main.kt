@@ -6,9 +6,18 @@ fun main() {
 }
 
 fun a() {
-    preparedInput.maxOrNull()!!.printResult()
+    preparedInput.map(String::toID).maxOrNull()?.printResult()
 }
 
 fun b() {
-    (preparedInput.sorted().zipWithNext().first { it.second - it.first == 2 }.first + 1).printResult()
+    (preparedInput.map(String::toID).sorted().zipWithNext().first { it.second - it.first == 2 }.first + 1).printResult()
+}
+
+fun String.toID() : Int {
+    return fold(0) { acc, char ->
+        when (char) {
+            'B', 'R' -> (acc shl 1) or 1
+            else -> acc shl 1
+        }
+    }
 }
