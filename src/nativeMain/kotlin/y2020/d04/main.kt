@@ -29,7 +29,7 @@ fun b() {
     )
 
     preparedInput.count {
-        requiredFields.entries.all { reqEntry -> it[reqEntry.key]?.run { reqEntry.value(this) } ?: false }
+        requiredFields.all { reqEntry -> it[reqEntry.key]?.run { reqEntry.value(this) } ?: false }
     }.printResult()
 
     "0123456789".toList().containsAll(listOf('a'))
