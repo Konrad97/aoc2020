@@ -1,7 +1,5 @@
 package y2020.d03
 
-import kotlin.math.floor
-
 fun main() {
     a()
     b()
