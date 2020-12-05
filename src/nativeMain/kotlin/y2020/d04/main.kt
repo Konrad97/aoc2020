@@ -25,7 +25,7 @@ fun b() {
         },
         "hcl" to { it matches Regex("#[0-9|a-f]{6}") },
         "ecl" to { it in setOf("amb", "blu", "brn", "gry", "grn", "hzl", "oth") },
-        "pid" to { it matches Regex("[0-9]{9}") },
+        "pid" to { it matches Regex("\\d{9}") },
     )
 
     preparedInput.count {
