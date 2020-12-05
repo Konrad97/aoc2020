@@ -10,8 +10,7 @@ val preparedInput: List<Int> by lazy {
             it.fold(0) { acc, char ->
                 when (char) {
                     'B', 'R' -> (acc shl 1) or 1
-                    'F', 'L' -> acc shl 1
-                    else -> error("Invalid char: '$char'")
+                    else -> acc shl 1
                 }
             }
         }
