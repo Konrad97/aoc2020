@@ -6,7 +6,9 @@ fun main() {
 }
 
 fun a() {
-    preparedInput.map { it.joinToString(separator = "").toSet().size }.printResult()
+    preparedInput.map {
+        it.joinToString(separator = "").toSet().size
+    }.printResult()
 }
 
 fun b() {
