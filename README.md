@@ -1,3 +1,3 @@
-# aocKNative
+# AdventOfCode in Kotlin Native
 
-AdventOfCode in Kotlin Native
+Checkout [AdventOfCode](https://adventofcode.com/).
