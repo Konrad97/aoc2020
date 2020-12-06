@@ -11,6 +11,6 @@ fun a() {
 
 fun b() {
     preparedInput.map {
-        it.fold(it.first().toSet()) { acc, line ->  (acc intersect line.toSet()) }.size.also { s -> println(s) }
+        it.map(String::toSet).reduce { acc, line -> acc intersect line.toSet()  }.size
     }.printResult()
 }
