@@ -7,7 +7,7 @@ fun main() {
 
 fun a() {
     preparedInput.map {
-        it.joinToString(separator = "").toSet().size
+        it.joinToString("").toSet().size
     }.printResult()
 }
 
