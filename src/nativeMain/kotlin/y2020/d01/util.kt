@@ -5,7 +5,7 @@ fun List<Int>.printResult() {
 }
 
 val preparedInput : List<Int> by lazy {
-    input.lines().filter { it.isNotEmpty() }.map { it.toInt() }
+    input.lines().map { it.toInt() }
 }
 
 private const val input = """1977
@@ -207,5 +207,4 @@ private const val input = """1977
 1319
 1882
 951
-1849
-"""
+1849"""

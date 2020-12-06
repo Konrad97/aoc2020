@@ -9,7 +9,7 @@ fun List<Int>.printResults() {
 }
 
 val preparedInput: List<List<Boolean>> by lazy {
-    input.lines().filter { it.isNotEmpty() }
+    input.lines()
         .map { line ->
             line.map {
                 it == '#'

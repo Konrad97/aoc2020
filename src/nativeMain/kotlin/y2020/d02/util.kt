@@ -12,7 +12,7 @@ fun Int.printResult() {
 }
 
 val preparedInput: List<Entry> by lazy {
-    input.lines().filter { it.isNotEmpty() }.map { line ->
+    input.lines().map { line ->
         line.replace(":", "").split("-", " ").let { Entry(it[0].toInt(), it[1].toInt(),  it[2][0],  it[3]) }
     }
 }
@@ -1016,5 +1016,4 @@ private const val input = """15-16 m: mhmjmzrmmlmmmmmm
 6-14 s: qpvlfbsgswsnwsmpz
 9-12 t: tvwstttttttktwt
 4-6 g: vslqbgg
-9-16 d: dsdddddddrdddddhdbdd
-"""
+9-16 d: dsdddddddrdddddhdbdd"""

@@ -5,7 +5,7 @@ fun Int.printResult() {
 }
 
 val preparedInput: List<String> by lazy {
-    input.lines().filter { it.isNotEmpty() }
+    input.lines()
 }
 
 private const val input = """FFBBFFFLLL
@@ -812,5 +812,4 @@ FFBFBFFRLR
 BFBFFFFRLR
 BFBFFBFRLL
 BFBBFBBRLL
-FFFBBBBLRR
-"""
+FFFBBBBLRR"""

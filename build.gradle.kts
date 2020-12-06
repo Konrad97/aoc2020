@@ -35,6 +35,9 @@ kotlin {
             executable("d05") {
                 entryPoint = "y2020.d05.main"
             }
+            executable("d06") {
+                entryPoint = "y2020.d06.main"
+            }
         }
     }
     sourceSets {

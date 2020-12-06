@@ -1184,5 +1184,4 @@ ecl:oth
 pid:874577361
 iyr:2010 eyr:2021
 hgt:160cm hcl:#c0946f
-byr:1959
-"""
+byr:1959"""
