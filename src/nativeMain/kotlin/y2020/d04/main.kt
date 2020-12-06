@@ -23,7 +23,7 @@ fun b() {
                 else -> false
             }
         },
-        "hcl" to { it matches Regex("#[0-9|a-f]{6}") },
+        "hcl" to { it matches Regex("#[\\d|a-f]{6}") },
         "ecl" to { it in setOf("amb", "blu", "brn", "gry", "grn", "hzl", "oth") },
         "pid" to { it matches Regex("\\d{9}") },
     )
