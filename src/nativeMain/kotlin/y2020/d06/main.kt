@@ -13,6 +13,6 @@ fun a() {
 
 fun b() {
     preparedInput.map {
-        it.map(String::toSet).reduce { acc, line -> acc intersect line.toSet()  }.size
+        it.map(String::toSet).reduce { acc, line -> acc intersect line.toSet() }.size
     }.printResult()
 }
