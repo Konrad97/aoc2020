@@ -1,8 +1,8 @@
 package y2020.d06
 
-fun List<Int>.printResult() {
+fun List<Int>.printResult() =
     println("The result is ${this.sum()}")
-}
+
 
 val preparedInput: List<List<String>> by lazy {
     input.split("\n\n").map { group -> group.lines() }

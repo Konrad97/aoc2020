@@ -1,12 +1,10 @@
 package y2020.d03
 
-fun Int.printResult() {
+fun Int.printResult() =
     println("There were $this trees in the way!")
-}
 
-fun List<Int>.printResults() {
+fun List<Int>.printResults() =
     println("There were ${this.joinToString(" and ")} trees in the way! The product is: ${this.map { it.toLong() }.reduce { acc, i -> acc * i }}")
-}
 
 val preparedInput: List<List<Boolean>> by lazy {
     input.lines()

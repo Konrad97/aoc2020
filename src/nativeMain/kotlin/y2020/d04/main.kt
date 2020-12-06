@@ -5,11 +5,9 @@ fun main() {
     b()
 }
 
-fun a() {
-    val requiredFields = setOf("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid")
+fun a() =
+    preparedInput.count { it.keys.containsAll(setOf("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid")) }.printResult()
 
-    preparedInput.count { it.keys.containsAll(requiredFields) }.printResult()
-}
 
 fun b() {
     val requiredFields = mapOf<String, (String) -> Boolean>(
@@ -32,6 +30,5 @@ fun b() {
         requiredFields.all { reqEntry -> it[reqEntry.key]?.run { reqEntry.value(this) } ?: false }
     }.printResult()
 
-    "0123456789".toList().containsAll(listOf('a'))
 }
 

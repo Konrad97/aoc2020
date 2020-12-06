@@ -1,8 +1,8 @@
 package y2020.d05
 
-fun Int.printResult() {
+fun Int.printResult() =
     println("It is seat number $this")
-}
+
 
 val preparedInput: List<String> by lazy {
     input.lines()

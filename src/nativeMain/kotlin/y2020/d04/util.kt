@@ -1,8 +1,8 @@
 package y2020.d04
 
-fun Int.printResult() {
+fun Int.printResult() =
     println("There are $this valid passports!")
-}
+
 
 val preparedInput: List<Map<String, String>> by lazy {
     input.split("\n\n").map { entry ->

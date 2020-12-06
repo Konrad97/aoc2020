@@ -5,14 +5,13 @@ fun main() {
     b()
 }
 
-fun a() {
+fun a() =
     preparedInput.map {
         it.joinToString("").toSet().size
     }.printResult()
-}
 
-fun b() {
+
+fun b() =
     preparedInput.map {
         it.map(String::toSet).reduce { acc, line -> acc intersect line.toSet() }.size
     }.printResult()
-}

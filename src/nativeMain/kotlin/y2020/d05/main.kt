@@ -5,19 +5,18 @@ fun main() {
     b()
 }
 
-fun a() {
+fun a() =
     preparedInput.map(String::toID).maxOrNull()?.printResult()
-}
 
-fun b() {
+
+fun b() =
     (preparedInput.map(String::toID).sorted().zipWithNext().first { it.second - it.first == 2 }.first + 1).printResult()
-}
 
-fun String.toID() : Int {
-    return fold(0) { acc, char ->
+
+fun String.toID(): Int =
+    fold(0) { acc, char ->
         when (char) {
             'B', 'R' -> (acc shl 1) or 1
             else -> acc shl 1
         }
     }
-}

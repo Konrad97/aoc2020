@@ -7,9 +7,9 @@ data class Entry (
     val password: String
 )
 
-fun Int.printResult() {
+fun Int.printResult() =
     println("$this passwords are valid!")
-}
+
 
 val preparedInput: List<Entry> by lazy {
     input.lines().map { line ->

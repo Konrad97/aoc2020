@@ -5,7 +5,7 @@ fun main() {
     b()
 }
 
-fun a() {
+fun a() =
     preparedInput.run {
         forEachIndexed { idxFirst, first ->
             subList(idxFirst + 1, size).forEach { second ->
@@ -14,9 +14,8 @@ fun a() {
         }
         error("No numbers found")
     }.printResult()
-}
 
-fun b() {
+fun b() =
     preparedInput.run {
         forEachIndexed { idxFirst, first ->
             subList(idxFirst + 1, size).forEachIndexed { idxSecond, second ->
@@ -27,4 +26,3 @@ fun b() {
         }
         error("No numbers found")
     }.printResult()
-}
