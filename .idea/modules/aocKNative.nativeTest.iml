@@ -5,8 +5,8 @@
       <configuration version="3" platform="Native (mingw_x64) " allPlatforms="Native []/Native [mingw_x64]" useProjectSettings="false" isTestModule="true" externalProjectId="aocKNative" pureKotlinSourceFolders="C:\Users\melze\Projects\aocKNative\src\commonMain\kotlin;C:\Users\melze\Projects\aocKNative\src\nativeMain\kotlin;C:\Users\melze\Projects\aocKNative\src\nativeMain\kotlin">
         <dependsOnModuleNames>aocKNative:commonTest</dependsOnModuleNames>
         <sourceSets>
-          <sourceSet>aocKNative.commonMain</sourceSet>
           <sourceSet>aocKNative.commonTest</sourceSet>
+          <sourceSet>aocKNative.commonMain</sourceSet>
           <sourceSet>aocKNative.nativeMain</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
