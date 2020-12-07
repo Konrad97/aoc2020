@@ -4,29 +4,12 @@ fun Int.printResult() =
     println("The result is $this")
 
 val preparedInput: Map<String, Map<String, Int>> by lazy {
-    input
-        .lines()
-        .map { line ->
-            line
-                .dropLast(1)
-                .split(" contain ", ", ")
-                .let { splits ->
-                    splits
-                        .first()
-                        .split(" ")
-                        .let { "${it[0]} ${it[1]}" } to
-                            splits.subList(1, splits.size)
-                                .filter { it != "no other bags" }
-                                .map { word ->
-                                    word.split(" ").let {
-                                        "${it[1]} ${it[2]}" to it[0].toInt()
-                                    }
-                                }.toMap()
-                }
+    input.lines().map { line ->
+        Regex("^[a-z]* [a-z]*").find(line)!!.value to Regex("\\d [a-z]* [a-z]*").findAll(line).map {
+            it.value.drop(2) to it.value.take(1).toInt()
         }.toMap()
+    }.toMap()
 }
-
-
 
 private const val input = """pale chartreuse bags contain 3 faded orange bags.
 drab gold bags contain 5 dark aqua bags.
