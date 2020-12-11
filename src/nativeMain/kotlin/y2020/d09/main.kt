@@ -6,16 +6,16 @@ fun main() {
 }
 
 fun a() {
-    preparedInput.firstInvalidOrNull().printResult()
+    preparedInput.findErrorOrNull().printResult()
 }
 
 fun b() {
-    preparedInput.crackCode(preparedInput.firstInvalidOrNull())!!.printResult()
+    preparedInput.crackCode(preparedInput.findErrorOrNull())!!.printResult()
 }
 
 private const val windowSize = 26
 
-fun List<Long>.firstInvalidOrNull(): Long =
+fun List<Long>.findErrorOrNull(): Long =
     windowed(windowSize) {
         if (it.dropLast(1)
                 .any { first -> it.dropLast(1).any { second -> (second != first) && ((first + second) == it.last()) } }
