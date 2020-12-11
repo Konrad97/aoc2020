@@ -29,6 +29,8 @@
           <externalSystemNativeMainRunTask>runD09ReleaseExecutableNative|aocKNative:nativeMain|native|y2020.d09.main|false</externalSystemNativeMainRunTask>
           <externalSystemNativeMainRunTask>runD10DebugExecutableNative|aocKNative:nativeMain|native|y2020.d10.main|true</externalSystemNativeMainRunTask>
           <externalSystemNativeMainRunTask>runD10ReleaseExecutableNative|aocKNative:nativeMain|native|y2020.d10.main|false</externalSystemNativeMainRunTask>
+          <externalSystemNativeMainRunTask>runD11DebugExecutableNative|aocKNative:nativeMain|native|y2020.d11.main|true</externalSystemNativeMainRunTask>
+          <externalSystemNativeMainRunTask>runD11ReleaseExecutableNative|aocKNative:nativeMain|native|y2020.d11.main|false</externalSystemNativeMainRunTask>
         </externalSystemTestTasks>
         <compilerSettings />
         <compilerArguments>
