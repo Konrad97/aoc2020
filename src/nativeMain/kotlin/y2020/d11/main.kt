@@ -52,7 +52,6 @@ fun List<List<Pair<Boolean, Boolean>>>.stepOnSight(): List<List<Pair<Boolean, Bo
             cell.first to if (cell.first) {
                 (-1..1).map { x ->
                     (-1..1).map { y ->
-
                         if (x == 0 && y == 0) false else travelUntilSeat(rowIdx to columnIdx, x to y)
                     }
                 }.flatten().count { it }.let { occupancy ->
