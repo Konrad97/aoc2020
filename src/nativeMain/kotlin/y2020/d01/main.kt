@@ -12,6 +12,8 @@ fun a() =
                 if (first + second == 2020) return@run listOf(first, second)
             }
         }
+
+        
         error("No numbers found")
     }.printResult()
 
